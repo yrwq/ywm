@@ -1,5 +1,8 @@
 const std = @import("std");
+const xlib = @import("xlib.zig");
+const c = @import("c.zig");
 
 pub fn main() anyerror!void {
-    std.log.info("All your codebase are belong to us.", .{});
+    xlib.init();
+    defer xlib.deinit();
 }
